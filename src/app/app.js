@@ -1,4 +1,3 @@
-import '../../css/style.css';
 (function () {
   'use strict';
 
@@ -14,5 +13,14 @@ import '../../css/style.css';
 
     firebase.initializeApp(config);
   });
+
+  myApp.controller('todoController', ['$scope','$firebaseArray', function($scope, $firebaseArray) {
+
+    var taskRef = firebase.database().ref('task');
+    var tasks = $firebaseArray(taskRef);
+
+    
+
+  }]);
 
 })();
