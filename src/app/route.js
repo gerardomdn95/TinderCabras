@@ -7,6 +7,10 @@
         template: '<nav-component></nav-component>',
         controllerAs: 'vm'
       })
+      .when('/app', {
+        template: '<app-component></app-component>',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/home'
       });
